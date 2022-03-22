@@ -4,7 +4,6 @@ import './SingleCard.css';
 const SingleCard = ({ card, handleChoice }) => {
    // handle click
    const handleClick = (hello) => {
-      console.log(hello.target);
       handleChoice(card);
    };
 
