@@ -27,6 +27,9 @@ function App() {
          .sort(() => Math.random() - 0.5)
          .map((card) => ({ ...card, id: Math.random() }));
 
+      setChoiceOne(null);
+      setChoiceTwo(null);
+
       // set shuffled card values
       setCards(shuffledCards);
 
@@ -62,6 +65,11 @@ function App() {
       }
    }, [choiceOne, choiceTwo]);
 
+   // start game automatically
+   useEffect(() => {
+      shuffleCards();
+   }, []);
+
    // reset turns and increase turn
    const resetTurn = () => {
       setChoiceOne(null);
@@ -89,6 +97,7 @@ function App() {
                />
             ))}
          </div>
+         <p className="turns"> Turns: {turns} </p>
       </div>
    );
 }
