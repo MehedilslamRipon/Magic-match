@@ -7,3 +7,10 @@
    border: 2px solid #fff;
    border-radius: 6px;
 }
+.card .front-img {
+   position: absolute;
+   transform: rotateY(90deg);
+}
+.flipped .front-img {
+   transform: rotateY(0deg);
+}
