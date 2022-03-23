@@ -10,7 +10,17 @@
 .card .front-img {
    position: absolute;
    transform: rotateY(90deg);
+   transition: all ease-in 0.2s;
 }
 .flipped .front-img {
    transform: rotateY(0deg);
+   transition-delay: 0.2s;
+}
+.card .cover-img {
+   transition: all ease-in 0.2s;
+   transition-delay: 0.2s;
+}
+.flipped .cover-img {
+   transform: rotateY(90deg);
+   transition-delay: 0s;
 }
