@@ -83,7 +83,7 @@ function App() {
       <div className="App">
          <h1>Magic Match</h1>
          <button onClick={shuffleCards}>New Game</button>
-
+         <p className="turns"> Turns: {turns} </p>
          <div className="card-grid">
             {cards.map((card) => (
                <SingleCard
@@ -97,7 +97,20 @@ function App() {
                />
             ))}
          </div>
-         <p className="turns"> Turns: {turns} </p>
+
+         {/* credit */}
+         <div className="dev-credit">
+            <p>
+               {' '}
+               &copy;{' '}
+               <a
+                  style={{ textDecoration: 'none', color: '#7b7bb4' }}
+                  href="https://facebook.com/mehediislamripon"
+               >
+                  Mehedi Islam Ripon
+               </a>{' '}
+            </p>
+         </div>
       </div>
    );
 }
